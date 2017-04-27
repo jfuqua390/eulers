@@ -9,4 +9,4 @@ def lpf(number):
         i = i + 1
     return number
 
-print(lpf(36))
+print(lpf(600851475143))
