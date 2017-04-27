@@ -11,9 +11,9 @@ def multiples(index, maxi):
         for x in range(0, count+1):
             a = x * index
             mylist.append(a)
-    
+
     return mylist
 
-print(sum(multiples(5, 1000)) + sum(multiples(3,1000)))
+print(sum(multiples(5, 1000)) + sum(multiples(3,1000)) - sum(multiples(15,1000)))
 
 print(multiples(4,20))
