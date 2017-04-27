@@ -1,32 +1,23 @@
 import math
 
-def pal(n):
-    if len(str(n)) == 4:
-        if int(str(n)[0]) - int(str(n)[3]) + int(str(n)[1]) - int(str(n)[2]) == 0:
-            return True
-        else:
-            return False
-    return False;
-
-print(pal(91*99))
-
-def findLargestPal():
-    a = 10
-    b = 99
-    result=0
-    for a in range(10, 99):
-        for b in range(10, 99):
-            if pal(a*b) and result < a*b:
-                result = a*b
-    return result
-
-print(findLargestPal())
-
-def num_digits(num):
-    ori = num
-    digs = 0
+def is_palindrome(number):
+    rev = 0
+    ori = number
     while ori > 0:
+        rev = rev * 10 + (ori % 10)
         ori = ori // 10
-        digs += 1
 
-    return digs
+    return rev == number
+
+print(is_palindrome(8008))
+
+def find_palindrome_max_multiples(minimum, maximum):
+    largest_palindrome = 0
+    for i in range(minimum, maximum):
+        for j in range(minimum, maximum):
+            if is_palindrome(i * j) and (i * j > largest_palindrome):
+                largest_palindrome = i * j
+
+    return largest_palindrome
+
+print(find_palindrome_max_multiples(100, 1000))
