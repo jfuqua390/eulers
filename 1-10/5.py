@@ -1,15 +1,5 @@
-def find_primes(n):
-    primes = []
-    for p in range(2,n+1):
-        for i in range(2, p):
-            if p % i == 0:
-                break
-        else:
-            primes.append(p)
-
-    return primes
-
-print(find_primes(20))
+import math
+import functools
 
 def find_prime_factors(n):
     i = 2
@@ -25,3 +15,25 @@ def find_prime_factors(n):
     return factors
 
 print(find_prime_factors(8))
+
+def gcd(a, b):
+    """Return greatest common divisor using Euclid's Algorithm."""
+    while b:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    """Return lowest common multiple."""
+    print(a * b // gcd(a, b))
+    return a * b // gcd(a, b)
+
+def lcmm(*args):
+    """Return lcm of args."""
+    return functools.reduce(lcm, args)
+
+def lcm_seq(seq):
+    """Return lcm of sequence."""
+    return functools.reduce(lcm, seq)
+
+solution = lcm_seq(range(1,21))
+print (lcmm(*range(1,20)))
