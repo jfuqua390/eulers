@@ -9,4 +9,4 @@ def find_primes(n):
 
     return primes
 
-print(find_primes(20))
+print(find_primes(17))
