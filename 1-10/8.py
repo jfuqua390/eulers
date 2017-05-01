@@ -3,7 +3,7 @@ def find_largest_product ():
     print(len(str(n)))
     result = 0
     for i in range(0, len(str(n))):
-        if(i > 12):
+        if(i > 3):
             if( int(str(n)[i]) * int(str(n)[i-1]) * int(str(n)[i-2]) * int(str(n)[i-3]) * int(str(n)[i-4]) * int(str(n)[i-5]) * int(str(n)[i-6]) * int(str(n)[i-7]) * int(str(n)[i-8]) * int(str(n)[i-9]) * int(str(n)[i-10]) * int(str(n)[i-11]) * int(str(n)[i-12]) > result ):
                 result = int(str(n)[i]) * int(str(n)[i-1]) * int(str(n)[i-2]) * int(str(n)[i-3]) * int(str(n)[i-4]) * int(str(n)[i-5]) * int(str(n)[i-6]) * int(str(n)[i-7]) * int(str(n)[i-8]) * int(str(n)[i-9]) * int(str(n)[i-10]) * int(str(n)[i-11]) * int(str(n)[i-12])
     return result
