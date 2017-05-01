@@ -1,3 +1,5 @@
+#Pythag Triples
+
 def is_trip(a, b, c):
     if(a < b and b < c):
         if(a*a + b*b == c*c):
